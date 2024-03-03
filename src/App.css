@@ -54,18 +54,15 @@
 
 @media (max-width: 768px) {
   .dates-container {
-    margin: 2rem 1rem; /* Reduces the horizontal margin */
-    justify-content: center; /* Centers the items if they don't fill the width */
+    margin: 2rem 1rem;
+    justify-content: center;
   }
 
   .date {
-    width: 30%; /* Adjust the width so three items can fit side by side */
+    width: 30%;
   }
 
-  /* Optional: Adjust the input width to better fit mobile screens */
   .input-container input {
-    width: calc(
-      100% - 4rem
-    ); /* Adjusts input width to be responsive with a bit of padding */
+    width: calc(100% - 4rem);
   }
 }
