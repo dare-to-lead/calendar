@@ -6,19 +6,19 @@ function App() {
 
   const presentDay = new Date();
   presentDay.setDate(1);
-  const allDays = [];
+  const totalDays = [];
 
-  const daysInMonth = new Date(
+  const daysInEachMonth = new Date(
     selectedDate.getFullYear(),
     selectedDate.getMonth() + 1,
     0
   ).getDate();
 
-  for (let i = 0; i < daysInMonth; i++) {
+  for (let i = 0; i < daysInEachMonth; i++) {
     const nextDay = new Date(selectedDate);
     nextDay.setDate(presentDay.getDate() + i);
     const formattedDate = nextDay.toISOString().split("T")[0];
-    allDays.push(formattedDate);
+    totalDays.push(formattedDate);
   }
 
   const selectedMonth = selectedDate.toLocaleString("default", {
@@ -44,7 +44,7 @@ function App() {
       </div>
 
       <div className="dates-container">
-        {allDays.map((day, index) => (
+        {totalDays.map((day, index) => (
           <span
             key={index}
             className="date"
