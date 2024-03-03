@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   background-color: #97bc62ff;
-  height: 100vh;
 }
 
 .input-container {
@@ -51,4 +50,22 @@
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .dates-container {
+    margin: 2rem 1rem; /* Reduces the horizontal margin */
+    justify-content: center; /* Centers the items if they don't fill the width */
+  }
+
+  .date {
+    width: 30%; /* Adjust the width so three items can fit side by side */
+  }
+
+  /* Optional: Adjust the input width to better fit mobile screens */
+  .input-container input {
+    width: calc(
+      100% - 4rem
+    ); /* Adjusts input width to be responsive with a bit of padding */
+  }
 }
